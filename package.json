@@ -1,0 +1,23 @@
+{
+  "name": "flight-links",
+  "description": "generate searches for all the flight sites!",
+  "version": "0.0.1",
+  "author": "Jingming Niu <niu@jingming.ca>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jingming/flight-links.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.3",
+    "lodash": "^4.6.1"
+  },
+  "main": "./lib",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "license": "MIT"
+}
