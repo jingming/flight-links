@@ -12,9 +12,14 @@
     "express": "^4.13.3",
     "lodash": "^4.6.1"
   },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0"
+  },
   "main": "./lib",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha --recursive test/"
   },
   "engines": {
     "node": ">=0.8.0"
