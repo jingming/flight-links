@@ -22,5 +22,5 @@ npm run test
 
 The webserver can be started using
 ```
-node index.js
+npm start
 ```
