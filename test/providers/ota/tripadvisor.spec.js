@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
-var kayak = require('../../../lib/providers/ota/kayak');
+var tripadvisor = require('../../../lib/providers/ota/tripadvisor');
 
-describe('kayak', function() {
+describe('tripadvisor', function() {
 
   it('should generate base one way url', function() {
     var opts = {
@@ -12,7 +12,7 @@ describe('kayak', function() {
       }]
     };
 
-    expect(kayak(opts)).to.equal('https://www.kayak.com/flights/YYZ-SFO/2016-03-17');
+    expect(tripadvisor(opts)).to.equal('http://www.tripadvisor.com/CheapFlights?airport0=YYZ&airport1=SFO&date0=2016-03-17');
   });
 
   it('should generate base round trip url', function() {
@@ -28,7 +28,7 @@ describe('kayak', function() {
       }]
     };
 
-    expect(kayak(opts)).to.equal('https://www.kayak.com/flights/YYZ-SFO/2016-03-17/2016-03-23');
+    expect(tripadvisor(opts)).to.equal('http://www.tripadvisor.com/CheapFlights?airport0=YYZ&airport1=SFO&date0=20160317&date1=20160323');
   });
 
   it('should generate base multi city url', function() {
@@ -48,7 +48,7 @@ describe('kayak', function() {
       }]
     };
 
-    expect(kayak(opts)).to.equal('https://www.kayak.com/flights/YYZ-SFO/2016-03-17/SFO-YYZ/2016-03-23/SFO-YYZ/2016-03-24');
+    expect(tripadvisor(opts)).to.equal('http://www.tripadvisor.com/CheapFlights?airport0=YYZ&airport1=SFO&date0=2016-03-17&airport2=SFO&airport3=YYZ&date1=2016-03-23&airport4=SFO&airport5=YYZ&date2=2016-03-24');
   });
 
   it('should generate multi city url for 2 flights', function() {
@@ -64,7 +64,7 @@ describe('kayak', function() {
       }]
     };
 
-    expect(kayak(opts)).to.equal('https://www.kayak.com/flights/YYZ-SFO/2016-03-17/SFO-YXE/2016-03-23');
+    expect(tripadvisor(opts)).to.equal('http://www.tripadvisor.com/CheapFlights?airport0=YYZ&airport1=SFO&date0=2016-03-17&airport2=SFO&airport3=YXE&date1=2016-03-23');
   });
 
 });
